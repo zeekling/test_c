@@ -74,3 +74,4 @@ Mkfile.old
 dkms.conf
 
 *.o
+core

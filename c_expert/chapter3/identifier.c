@@ -18,7 +18,7 @@ struct token stack[MAXTOKENS];
 struct token this;
 
 #define pop stack[top--]
-#define push(s) stack[++top];
+#define push(s) stack[++top] = s;
 
 enum type_tag classify_string(void)
 {
@@ -49,7 +49,6 @@ enum type_tag classify_string(void)
 void gettoken(void)
 {
 	char *p = this.string;
-	printf("this.string=%s\n", this.string);
 	/* 略过空白字符 */
 	while ((*p = getchar()) == ' ');
 	if (isalnum(*p))
@@ -98,7 +97,7 @@ void deal_with_arrays(void)
 			gettoken();
 		}
 		gettoken();
-		printf("of ");
+		printf(" of ");
 	}
 }
 
