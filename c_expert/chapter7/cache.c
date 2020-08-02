@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define DUMBCOPY for (i=0;i< 65536;i++) \
 						destination[i] = source[i]
